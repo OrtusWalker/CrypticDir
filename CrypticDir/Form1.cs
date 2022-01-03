@@ -29,7 +29,7 @@ namespace CrypticDir
             ActiveForm.WindowState = FormWindowState.Minimized;
         }
 
-        private void launcherMovingSetPoint(object sender, MouseEventArgs e)
+        private void formMovingSetPoint(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -37,7 +37,7 @@ namespace CrypticDir
             }
         } //   ***DONE***
 
-        private void launcherMoving(object sender, MouseEventArgs e)
+        private void formMoving(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -61,12 +61,19 @@ namespace CrypticDir
             this.WndProc(ref m);
         }
 
+        private void formMovingEvents(Control control)
+        {
+            control.MouseDown += formMovingSetPoint;
+            control.MouseMove += formMoving;
+        }
+
         private void Form1_Shown(object sender, EventArgs e)
         {
-            panel1.MouseDown += launcherMovingSetPoint;
-            panel2.MouseDown += launcherMovingSetPoint;
-            panel1.MouseMove += launcherMoving;
-            panel2.MouseMove += launcherMoving;
+            formMovingEvents(panel1);
+            foreach (Control item in panel1.Controls)
+            {
+                formMovingEvents(item);
+            }
             panel2.Dock = DockStyle.Fill;
         }
     }
