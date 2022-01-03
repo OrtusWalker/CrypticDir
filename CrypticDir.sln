@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrypticDir", "CrypticDir\CrypticDir.csproj", "{DDC29D7C-4E54-4BF9-B21A-E6B6F1124287}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDC29D7C-4E54-4BF9-B21A-E6B6F1124287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDC29D7C-4E54-4BF9-B21A-E6B6F1124287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDC29D7C-4E54-4BF9-B21A-E6B6F1124287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDC29D7C-4E54-4BF9-B21A-E6B6F1124287}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7AB202E-23A8-4962-89ED-FA29C8BEF66E}
+	EndGlobalSection
+EndGlobal
