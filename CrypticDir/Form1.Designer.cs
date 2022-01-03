@@ -29,113 +29,113 @@ namespace CrypticDir
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.programTitlePanel = new System.Windows.Forms.Panel();
+            this.programTitleLabel = new System.Windows.Forms.Label();
+            this.programTitleIcon = new System.Windows.Forms.PictureBox();
+            this.programTitleButtonsPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonMinimaze = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
+            this.programBodyPanel = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.programTitlePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.programTitleIcon)).BeginInit();
+            this.programTitleButtonsPanel.SuspendLayout();
+            this.programBodyPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // programTitlePanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(750, 36);
-            this.panel1.TabIndex = 0;
+            this.programTitlePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
+            this.programTitlePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.programTitlePanel.Controls.Add(this.programTitleLabel);
+            this.programTitlePanel.Controls.Add(this.programTitleIcon);
+            this.programTitlePanel.Controls.Add(this.programTitleButtonsPanel);
+            this.programTitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.programTitlePanel.Location = new System.Drawing.Point(0, 0);
+            this.programTitlePanel.Name = "programTitlePanel";
+            this.programTitlePanel.Size = new System.Drawing.Size(750, 36);
+            this.programTitlePanel.TabIndex = 0;
             // 
-            // button2
+            // programTitleLabel
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(3, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(28, 28);
-            this.button2.TabIndex = 0;
-            this.button2.TabStop = false;
-            this.button2.Text = "_";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.programTitleLabel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.programTitleLabel.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.programTitleLabel.Location = new System.Drawing.Point(34, 0);
+            this.programTitleLabel.Name = "programTitleLabel";
+            this.programTitleLabel.Size = new System.Drawing.Size(212, 34);
+            this.programTitleLabel.TabIndex = 2;
+            this.programTitleLabel.Text = "Cryptic Directory";
+            this.programTitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button1
+            // programTitleIcon
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(37, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(28, 28);
-            this.button1.TabIndex = 0;
-            this.button1.TabStop = false;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.programTitleIcon.Dock = System.Windows.Forms.DockStyle.Left;
+            this.programTitleIcon.Image = global::CrypticDir.Properties.Resources._57b8bfaf3756c156a9acc47b;
+            this.programTitleIcon.Location = new System.Drawing.Point(0, 0);
+            this.programTitleIcon.Name = "programTitleIcon";
+            this.programTitleIcon.Size = new System.Drawing.Size(34, 34);
+            this.programTitleIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.programTitleIcon.TabIndex = 1;
+            this.programTitleIcon.TabStop = false;
             // 
-            // panel2
+            // programTitleButtonsPanel
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 36);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(750, 355);
-            this.panel2.TabIndex = 1;
+            this.programTitleButtonsPanel.AutoSize = true;
+            this.programTitleButtonsPanel.Controls.Add(this.buttonMinimaze);
+            this.programTitleButtonsPanel.Controls.Add(this.buttonExit);
+            this.programTitleButtonsPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.programTitleButtonsPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.programTitleButtonsPanel.Location = new System.Drawing.Point(680, 0);
+            this.programTitleButtonsPanel.Name = "programTitleButtonsPanel";
+            this.programTitleButtonsPanel.Size = new System.Drawing.Size(68, 34);
+            this.programTitleButtonsPanel.TabIndex = 0;
             // 
-            // flowLayoutPanel1
+            // buttonMinimaze
             // 
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.Controls.Add(this.button2);
-            this.flowLayoutPanel1.Controls.Add(this.button1);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(680, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(68, 34);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.buttonMinimaze.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.buttonMinimaze.FlatAppearance.BorderSize = 0;
+            this.buttonMinimaze.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.buttonMinimaze.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.buttonMinimaze.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMinimaze.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonMinimaze.ForeColor = System.Drawing.Color.White;
+            this.buttonMinimaze.Location = new System.Drawing.Point(3, 3);
+            this.buttonMinimaze.Name = "buttonMinimaze";
+            this.buttonMinimaze.Size = new System.Drawing.Size(28, 28);
+            this.buttonMinimaze.TabIndex = 0;
+            this.buttonMinimaze.TabStop = false;
+            this.buttonMinimaze.Text = "_";
+            this.buttonMinimaze.UseVisualStyleBackColor = false;
+            this.buttonMinimaze.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label1
+            // buttonExit
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(34, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 34);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Cryptic Directory";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonExit.FlatAppearance.BorderSize = 0;
+            this.buttonExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonExit.ForeColor = System.Drawing.Color.White;
+            this.buttonExit.Location = new System.Drawing.Point(37, 3);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(28, 28);
+            this.buttonExit.TabIndex = 0;
+            this.buttonExit.TabStop = false;
+            this.buttonExit.Text = "X";
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pictureBox1
+            // programBodyPanel
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::CrypticDir.Properties.Resources._57b8bfaf3756c156a9acc47b;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 34);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.programBodyPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
+            this.programBodyPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.programBodyPanel.Controls.Add(this.groupBox1);
+            this.programBodyPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.programBodyPanel.Location = new System.Drawing.Point(0, 36);
+            this.programBodyPanel.Name = "programBodyPanel";
+            this.programBodyPanel.Size = new System.Drawing.Size(750, 355);
+            this.programBodyPanel.TabIndex = 1;
             // 
             // groupBox1
             // 
@@ -156,8 +156,8 @@ namespace CrypticDir
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(84)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(750, 440);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.programBodyPanel);
+            this.Controls.Add(this.programTitlePanel);
             this.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -165,25 +165,24 @@ namespace CrypticDir
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cryptic Directory";
             this.Shown += new System.EventHandler(this.Form1_Shown);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.programTitlePanel.ResumeLayout(false);
+            this.programTitlePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.programTitleIcon)).EndInit();
+            this.programTitleButtonsPanel.ResumeLayout(false);
+            this.programBodyPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel programTitlePanel;
+        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Button buttonMinimaze;
+        private System.Windows.Forms.Panel programBodyPanel;
+        private System.Windows.Forms.FlowLayoutPanel programTitleButtonsPanel;
+        private System.Windows.Forms.Label programTitleLabel;
+        private System.Windows.Forms.PictureBox programTitleIcon;
         private System.Windows.Forms.GroupBox groupBox1;
     }
 }

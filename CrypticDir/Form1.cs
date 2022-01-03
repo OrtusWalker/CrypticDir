@@ -18,7 +18,6 @@ namespace CrypticDir
         }
 
         Point lastMousePosition;
-
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -29,13 +28,12 @@ namespace CrypticDir
             ActiveForm.WindowState = FormWindowState.Minimized;
         }
 
-        private void formMovingSetPoint(object sender, MouseEventArgs e)
+        private void Form_MouseDownFormMoving(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                lastMousePosition = MousePosition;
-            }
-        } //   ***DONE***
+            base.Capture = false;
+            Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+            this.WndProc(ref m);
+        }
 
         private void formMoving(object sender, MouseEventArgs e)
         {
@@ -54,14 +52,15 @@ namespace CrypticDir
             }
         } //   ***DONE***
 
-        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        private void formMovingSetPoint(object sender, MouseEventArgs e)
         {
-            base.Capture = false;
-            Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
-            this.WndProc(ref m);
-        }
+            if (e.Button == MouseButtons.Left)
+            {
+                lastMousePosition = MousePosition;
+            }
+        } //   ***DONE***
 
-        private void formMovingEvents(Control control)
+        public void formMovingEvents(Control control)
         {
             control.MouseDown += formMovingSetPoint;
             control.MouseMove += formMoving;
@@ -69,12 +68,12 @@ namespace CrypticDir
 
         private void Form1_Shown(object sender, EventArgs e)
         {
-            formMovingEvents(panel1);
-            foreach (Control item in panel1.Controls)
+            formMovingEvents(programTitlePanel);
+            foreach (Control item in programTitlePanel.Controls)
             {
                 formMovingEvents(item);
             }
-            panel2.Dock = DockStyle.Fill;
+            programBodyPanel.Dock = DockStyle.Fill;
         }
     }
 }
