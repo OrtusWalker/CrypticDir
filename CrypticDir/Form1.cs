@@ -17,24 +17,37 @@ namespace CrypticDir
             InitializeComponent();
         }
 
-        Point lastMousePosition;
+        Point lastMousePosition; //FormMoving
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            formMovingEvents(programTitlePanel);
+            foreach (Control item in programTitlePanel.Controls)
+            {
+                formMovingEvents(item);
+            }
+            programBodyPanel.Dock = DockStyle.Fill;
+
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
+        } // Form close
 
         private void button2_Click(object sender, EventArgs e)
         {
             ActiveForm.WindowState = FormWindowState.Minimized;
-        }
-
+        } // Form minimaze
+        /*
         private void Form_MouseDownFormMoving(object sender, MouseEventArgs e)
         {
             base.Capture = false;
             Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
             this.WndProc(ref m);
         }
-
+        */
         private void formMoving(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -50,30 +63,31 @@ namespace CrypticDir
                     Location = new Point(Location.X, 0);
                 }
             }
-        } //   ***DONE***
+        } //   ***DONE*** form moving event
 
         private void formMovingSetPoint(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            try
             {
-                lastMousePosition = MousePosition;
+                if (e.Button == MouseButtons.Left)
+                    if (ActiveForm.WindowState != FormWindowState.Maximized)
+                    {
+                        lastMousePosition = MousePosition;
+                    }
+                    else
+                    {
+                        lastMousePosition = MousePosition;
+                        ActiveForm.WindowState = FormWindowState.Normal;
+                        ActiveForm.Location = new Point(MousePosition.X - ActiveForm.Width / 2, MousePosition.Y - programTitlePanel.Height / 2);
+                    }
             }
-        } //   ***DONE***
+            catch (Exception) { }
+        } //   ***DONE*** form moving event
 
         public void formMovingEvents(Control control)
         {
             control.MouseDown += formMovingSetPoint;
             control.MouseMove += formMoving;
-        }
-
-        private void Form1_Shown(object sender, EventArgs e)
-        {
-            formMovingEvents(programTitlePanel);
-            foreach (Control item in programTitlePanel.Controls)
-            {
-                formMovingEvents(item);
-            }
-            programBodyPanel.Dock = DockStyle.Fill;
-        }
+        } //   ***DONE*** add control form moving events 
     }
 }
