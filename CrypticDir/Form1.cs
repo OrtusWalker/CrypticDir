@@ -28,7 +28,7 @@ namespace CrypticDir
             }
             programBodyPanel.Dock = DockStyle.Fill;
 
-
+            // Проверка файла с ключем
         }
 
         private void button1_Click(object sender, EventArgs e)
