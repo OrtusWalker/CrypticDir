@@ -40,14 +40,7 @@ namespace CrypticDir
         {
             ActiveForm.WindowState = FormWindowState.Minimized;
         } // Form minimaze
-        /*
-        private void Form_MouseDownFormMoving(object sender, MouseEventArgs e)
-        {
-            base.Capture = false;
-            Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
-            this.WndProc(ref m);
-        }
-        */
+
         private void formMoving(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)

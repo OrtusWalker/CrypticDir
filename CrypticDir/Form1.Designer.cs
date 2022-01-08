@@ -37,12 +37,10 @@ namespace CrypticDir
             this.buttonExit = new System.Windows.Forms.Button();
             this.programBodyPanel = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.programTitlePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.programTitleIcon)).BeginInit();
             this.programTitleButtonsPanel.SuspendLayout();
             this.programBodyPanel.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // programTitlePanel
@@ -139,7 +137,6 @@ namespace CrypticDir
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
@@ -149,16 +146,6 @@ namespace CrypticDir
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Text";
-            // 
-            // panel1
-            // 
-            this.panel1.AllowDrop = true;
-            this.panel1.AutoSize = true;
-            this.panel1.BackColor = System.Drawing.Color.Red;
-            this.panel1.Location = new System.Drawing.Point(284, 98);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
-            this.panel1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -181,8 +168,6 @@ namespace CrypticDir
             ((System.ComponentModel.ISupportInitialize)(this.programTitleIcon)).EndInit();
             this.programTitleButtonsPanel.ResumeLayout(false);
             this.programBodyPanel.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -197,7 +182,6 @@ namespace CrypticDir
         private System.Windows.Forms.Label programTitleLabel;
         private System.Windows.Forms.PictureBox programTitleIcon;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Panel panel1;
     }
 }
 
