@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,8 @@ namespace CrypticDir
         }
 
         Point lastMousePosition; //FormMoving
+        string dir = ""; //.crd
+        string password = "";
 
         private void Form1_Shown(object sender, EventArgs e)
         {
@@ -29,6 +32,12 @@ namespace CrypticDir
             programBodyPanel.Dock = DockStyle.Fill;
 
             // Проверка файла с ключем
+            FileInfo f = new FileInfo("data.crd");
+            if (f.Exists)
+            using (StreamReader sr = f.OpenText())
+            {
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
